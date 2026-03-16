@@ -82,12 +82,39 @@ button:focus-visible {
   flex: 1;
   display: flex;
   justify-content: center;
-}
+} 
 .profile-img{
+
   width: 300px;
-  max-width: 100%;
   border-radius: 50%;
   border: 4px solid #1E2E4F;
-  object-fit: cover;
-
+  object-fit: cover;  
+}
+.highlight{
+  color: #8FB3E2;
+}
+.hero-about{
+  font-family: 'inter', sans-serif;
+  font-size: 28px; 
+  margin-top: 48px; 
+}
+.hero-list{
+  font-family: 'inter', sans-serif;
+  font-size: 28px; 
+  margin-top: 48px; 
+}
+.hero-wrap{
+  background-color: #33415c; 
+  padding: 50px;
+  border-radius: 10px;
+  width: fit-content;
+}
+.contact-wrap{
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #33415c; 
+  padding: 50px;
+  border-radius: 10px;
+  width: 700px;
 }

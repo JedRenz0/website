@@ -16,6 +16,7 @@ export default function Hero(){
                 />
             </div>
             <div className ="hero-wrap">
+            
                 <div className="herotext">
                     <h1>
                         Hi, I'm <span className="highlight">Jed Renzo</span>
@@ -31,10 +32,10 @@ export default function Hero(){
                             loop
                             />
                     </h2>
-                    <p>I am a Aspiring software developer with a strong foundation in computer engineering 
+                    <p className="hero-about">I am a Aspiring software developer with a strong foundation in computer engineering 
                         and a drive to create impactful technology.
                     </p>
-                    <list>
+                    <list className="hero-list">
                     <li>2nd year Computer Engineering Student at University of Guelph</li>
                     <li>Previous Technical Systems Analyst at RBC T&O </li>
                     <li>Incomming Software Developer RBC T&O Summer 2026</li>
