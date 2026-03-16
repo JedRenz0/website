@@ -52,6 +52,9 @@ button:focus-visible {
   .hero-photo{
     margin-top: 20px;
   }
+  .contact-wrap{
+    margin-top: 20px;
+  }
 }
 
 
@@ -103,18 +106,24 @@ button:focus-visible {
   font-size: 28px; 
   margin-top: 48px; 
 }
+
 .hero-wrap{
+  margin-top: 20px;
   background-color: #33415c; 
   padding: 50px;
   border-radius: 10px;
   width: fit-content;
 }
 .contact-wrap{
-  display: flex;
-  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
   margin: 0 auto;
+  margin-top: 20px;
+  padding: 40px 20px;
+
   background-color: #33415c; 
   padding: 50px;
   border-radius: 10px;
-  width: 700px;
+  width: 1280px; 
 }
