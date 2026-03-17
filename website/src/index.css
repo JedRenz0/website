@@ -24,6 +24,16 @@ h2 {
   margin-top: 48px; 
 }
 
+p{
+  font-family: 'inter', sans-serif;
+  font-size: 28px; 
+  margin-top: 48px; 
+}
+
+a{
+  color: #8FB3E2;
+}
+
 
 button {
   border-radius: 8px;
