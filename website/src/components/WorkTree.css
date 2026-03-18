@@ -1,0 +1,148 @@
+.work-tree-section {
+    background-color: #33415c;
+  padding: 50px;
+  border-radius: 16px;
+  color: white;
+
+  width: calc(100% - 40px);
+  max-width: none;
+  margin: 60px auto;
+  box-sizing: border-box;
+
+  }
+  
+  .work-tree-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+  
+  .work-tree {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .tree-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #4b6382;
+    transform: translateX(-50%);
+  }
+  
+  .tree-node {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+  
+  .tree-node.left {
+    left: 0;
+    text-align: right;
+  }
+  
+  .tree-node.right {
+    left: 50%;
+    text-align: left;
+  }
+  
+  .node-dot {
+    width: 18px;
+    height: 18px;
+    background: #ffffff;
+    border: 4px solid #4b6382;
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .tree-node.left .node-dot {
+    right: -9px;
+  }
+  
+  .tree-node.right .node-dot {
+    left: -9px;
+  }
+  
+  .node-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .node-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .node-period {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 8px;
+  }
+  
+  .node-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .node-card h4 {
+    margin: 4px 0 10px;
+    font-weight: 400;
+    color: #b8c7e0;
+  }
+  
+  .node-details {
+    margin-top: 15px;
+  }
+  
+  .node-details ul {
+    padding-left: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .tech-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .tech-tags span {
+    background: #24324a;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+  
+  @media (max-width: 768px) {
+    .tree-line {
+      left: 20px;
+    }
+  
+    .tree-node,
+    .tree-node.left,
+    .tree-node.right {
+      width: 100%;
+      left: 0;
+      text-align: left;
+      padding-left: 55px;
+      padding-right: 15px;
+    }
+  
+    .tree-node.left .node-dot,
+    .tree-node.right .node-dot {
+      left: 11px;
+      right: auto;
+    }
+  }
