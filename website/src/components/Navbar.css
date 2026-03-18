@@ -1,4 +1,5 @@
 .navbar{
+    box-sizing: border-box;
     position: fixed;
     top: 0;
     width: 100%;
@@ -18,7 +19,7 @@
 }
 .navbar-links{
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 .navbar-link{
     text-decoration: none;
