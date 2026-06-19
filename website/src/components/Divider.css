@@ -1,0 +1,26 @@
+.divider {
+  height: 220px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.divider-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom,
+      var(--bg-primary) 0%,
+      rgba(15, 26, 46, 0.25) 18%,
+      rgba(15, 26, 46, 0.25) 82%,
+      var(--bg-primary) 100%
+    );
+}
+
+@media (max-width: 768px) {
+  .divider {
+    background-attachment: scroll;
+    height: 160px;
+  }
+}

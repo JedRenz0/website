@@ -1,0 +1,150 @@
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.exp-card {
+  background: var(--bg-card);
+  border: var(--card-border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.exp-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--glow-hover);
+  border: var(--card-border-hover);
+}
+
+.exp-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.exp-logo-wrap {
+  flex-shrink: 0;
+}
+
+.exp-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.exp-logo-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: rgba(124, 184, 228, 0.1);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.exp-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.exp-role {
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.exp-company {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.exp-type {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.exp-meta {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.exp-chevron {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  transition: transform 0.25s ease;
+  margin-top: 4px;
+}
+
+.exp-chevron--open {
+  transform: rotate(180deg);
+}
+
+.exp-summary {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+.exp-details {
+  overflow: hidden;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(124, 184, 228, 0.08);
+}
+
+.exp-highlights {
+  padding-left: 18px;
+  margin-bottom: 16px;
+}
+
+.exp-highlights li {
+  list-style: disc;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+
+.exp-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exp-tech-tags span {
+  background: rgba(124, 184, 228, 0.1);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .exp-card {
+    padding: 20px;
+  }
+
+  .exp-logo,
+  .exp-logo-placeholder {
+    width: 40px;
+    height: 40px;
+  }
+
+  .exp-role {
+    font-size: 1rem;
+  }
+}

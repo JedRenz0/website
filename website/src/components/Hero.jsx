@@ -1,82 +1,84 @@
-import React from "react";
-import {ReactTyped} from "react-typed";
-import banner from "../assets/sky.jpg";
-import profile from "../assets/profile.png";
+import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
+import banner from "../assets/sky.jpg";
+import profile from "../assets/profile.jpg";
+import "./Hero.css";
 
+export default function Hero() {
+  return (
+    <section id="home" className="hero">
+      <div className="hero-sky">
+        <img className="hero-sky-img" src={banner} alt="" />
+        <div className="hero-sky-overlay" />
+      </div>
 
-
-export default function Hero(){
-    return(
-        <section id="home" className="hero">
-            <div className="hero-container">
-                <img 
-                    className="hero-img"
-                    src={banner}
-                    alt="Sky Banner"
+      <div className="hero-inner">
+        <motion.div
+          className="hero-card"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <div className="hero-card-content">
+            <div className="hero-text">
+              <div className="hero-status">
+                <span className="status-dot" />
+                Currently SWE Intern @ RBC
+              </div>
+              <p className="hero-greeting">Hi, I'm</p>
+              <h1 className="hero-name">
+                Jed <span className="highlight">Renzo</span>
+              </h1>
+              <h2 className="hero-typed">
+                <ReactTyped
+                  strings={[
+                    "Computer Engineer",
+                    "Software Developer",
+                    "Problem Solver",
+                  ]}
+                  typeSpeed={80}
+                  backSpeed={50}
+                  backDelay={1200}
+                  smartBackspace
+                  loop
                 />
-            </div>
-            <div className ="hero-wrap">
-            
-                <div className="herotext">
-                    <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.1 }}
-                    className="text-5xl font-bold"
-                    >
-                        Hi, I'm <span className="highlight">Jed Renzo</span>
-                    </motion.h1>
-                    <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.1 }}
-                    className="text-5xl font-bold"
-                    >
-                        {""}
-                        <ReactTyped
-                            strings={["An Computer Engineer","A programmer", "A Developer"]}
-                            typeSpeed={100}
-                            backSpeed={60}
-                            backDelay={900}
-                            smartBackspace
-                            loop
-                            />
-                    </motion.h2>
-                    <motion.p 
-                    className="hero-about"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.1 }}
-                    >
-                        I am a Aspiring software developer with a strong foundation in computer engineering 
-                        and a drive to create impactful technology.
-                    </motion.p>
-
-                    <motion.ul
-                    className="hero-list"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                    >
-                    <li>2nd year Computer Engineering Student at University of Guelph</li>
-                    <li>Previous Technical Systems Analyst at RBC T&amp;O</li>
-                    <li>Incoming Software Developer RBC T&amp;O Summer 2026</li>
-                    <li>Passionate in software development</li>
-                    <li>Past involvements with design teams and robotics competitions</li>
-                    </motion.ul>
-                    
-                </div>
-                <div className="hero-photo">
-                    <img src={profile} alt="Jed Renzo Portrait" className="profile-img"/>
-                </div>
-
+              </h2>
+              <p className="hero-tagline">
+                Aspiring software developer with a strong foundation in computer
+                engineering and a drive to create impactful technology.
+              </p>
+              <div className="hero-cta">
+                <a href="#projects" className="btn btn--primary">
+                  View Projects
+                </a>
+                <a
+                  href="./resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn--outline"
+                >
+                  Resume
+                </a>
+              </div>
             </div>
 
-        </section>
-    );
-
-
-
-
+            <motion.div
+              className="hero-photo"
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            >
+              <div className="profile-ring">
+                <img
+                  src={profile}
+                  alt="Jed Renzo Villapando"
+                  className="profile-img"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
 }
