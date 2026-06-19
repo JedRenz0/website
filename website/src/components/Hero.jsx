@@ -23,7 +23,7 @@ export default function Hero() {
             <div className="hero-text">
               <div className="hero-status">
                 <span className="status-dot" />
-                Currently SWE Intern @ RBC
+                Currently SDET Intern @ RBC
               </div>
               <p className="hero-greeting">Hi, I'm</p>
               <h1 className="hero-name">
